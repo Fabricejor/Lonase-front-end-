@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --background: #ffffff;
@@ -22,5 +23,18 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif ,;
+}
+
+/* Appliquer Montserrat à un élément spécifique */
+.special-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400; /* Vous pouvez ajuster le poids de la police selon vos besoins */
+}
+
+/* Appliquer Montserrat en italique */
+.italic-text {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 400;
 }
