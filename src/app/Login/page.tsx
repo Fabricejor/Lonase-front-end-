@@ -21,7 +21,7 @@ export default function page() {
                         <SubTitleForm text='Bienvenu sur votre page de connexion' />
                     </div>
                     <div className='form-connexion w-[85%] flex flex-col'>
-                        <form action="" className='grid gap-y-7'>
+                        <form action="" className='grid gap-y-5'>
                             <ImputForm label='Email' type='email' placeholder='Gtp@ia.com' />
                             <ImputForm label='mot de passe' type='password' placeholder='password' />
                             <div className='button-form-connexion space-x-4 p-10'>
