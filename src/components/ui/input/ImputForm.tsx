@@ -14,7 +14,7 @@ export default function ImputForm({ label, ...props }: InputProps) {
         <div className="relative w-full">
             {/* Label flottant */}
             <label
-                className={` ${roboto.className} absolute left-3 transition-all ${isFocused || hasValue ? "top-1 text-xs text-gray-500" : "top-3 text-base text-gray-500"
+                className={` ${roboto.className} absolute left-3 transition-all ${isFocused || hasValue ? "top-1 text-xs text-gray-500" : "max-xl:top-0.5 top-1 text-lg max-xl:text-base text-gray-500"
                     }`}
             >
                 {label}

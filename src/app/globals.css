@@ -38,3 +38,16 @@ body {
   font-style: italic;
   font-weight: 400;
 }
+
+@keyframes custom-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-custom-pulse {
+  animation: custom-pulse 5s infinite; /* Durée de 3 secondes */
+}
