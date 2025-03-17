@@ -3,7 +3,7 @@ import { Montserrat } from "next/font/google";
 import { Open_Sans } from "next/font/google";
 import { Roboto } from "next/font/google";
 import { Poppins } from 'next/font/google';
-
+import { Inter } from "next/font/google";
 
 export const montserrat = Montserrat({
   subsets: ["latin"],
@@ -25,6 +25,11 @@ export const roboto = Roboto({
 });
 export const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["500"], // Specify the required weight
+  weight: [ "300","400","500" ,"600","700"], // Specify the required weight
   style: ["normal"], // Specify the required style
+});
+export const inter = Inter({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"], // Specify the required weights
+  style: ["normal", "italic"], // Specify the required styles
 });
