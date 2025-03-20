@@ -45,10 +45,10 @@ export default function DetailCard() {
             </div>
             <div className="option flex flex-col w-[20%] h-full items-center justify-center border-x border-gray-300 ">
                 <div className='option-list flex flex-row items-center justify-center mt-[10%]'>
-                    <FaCheckCircle  className='text-green-400 text-5xl'/>
-                    <TiDelete  className='text-red-500 text-6xl'/>
+                    <FaCheckCircle  className='text-green-400 text-5xl cursor-pointer'/>
+                    <TiDelete  className='text-red-500 text-6xl cursor-pointer'/>
                 </div>
-                <div className='badge-montant h-full flex items-center justify-center '>
+                <div className='badge-montant h-full w-full  flex items-center justify-center '>
                     <PriceBadge amount={3000}/>
                 </div>
             </div>

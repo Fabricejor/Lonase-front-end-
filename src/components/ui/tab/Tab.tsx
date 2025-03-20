@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FaList } from "react-icons/fa6";
+import { FaListCheck } from "react-icons/fa6";
 
 const demandes = [
     { id: 1, nom: "HEYBA FOUNDA", type: "Tech", secteur: "SPORT", localisation: "DAKAR - SN", montant: "3.000.000 XFO", statut: "validée" },
@@ -30,24 +32,24 @@ const TableComponent = () => {
             {/* Boutons de filtre */}
             <div className="flex space-x-4 mb-4">
                 <button
-                    className={`px-4 py-2 rounded-lg font-semibold ${filter === "prévalidée" ? "bg-green-500 text-white" : "bg-gray-200"}`}
+                    className={`px-4 py-2 rounded-lg font-semibold flex flex-row items-center justify-center ${filter === "prévalidée" ? "bg-green-500 text-white" : "bg-gray-200"}`}
                     onClick={() => { setFilter("prévalidée"); setCurrentPage(1); }}
                 >
-                    📝 Demandes Prévalidées
+                <FaList /> <span className="ml-4"> Demandes Prévalidées</span>
                 </button>
                 <button
-                    className={`px-4 py-2 rounded-lg font-semibold ${filter === "validée" ? "bg-green-500 text-white" : "bg-gray-200"}`}
+                    className={`px-4 py-2 rounded-lg font-semibold  flex flex-row items-center justify-center ${filter === "validée" ? "bg-green-500 text-white" : "bg-gray-200"}`}
                     onClick={() => { setFilter("validée"); setCurrentPage(1); }}
                 >
-                    ✅ Demandes Validées
+                <FaListCheck  /><span className="ml-4"> Demandes Validées</span>
                 </button>
             </div>
 
             {/* Tableau */}
             <div className="overflow-x-auto">
-                <table className="w-full border-collapse border border-gray-200">
-                    <thead className="bg-green-100">
-                        <tr className="text-left">
+                <table className="w-full border-collapse border border-gray-400">
+                    <thead className="bg-green-300">
+                        <tr className="text-center">
                             <th className="p-2 border">Nom</th>
                             <th className="p-2 border">Type d’organisation</th>
                             <th className="p-2 border">Secteur</th>
@@ -60,12 +62,12 @@ const TableComponent = () => {
                         {currentData.length > 0 ? (
                             currentData.map((item) => (
                                 <tr key={item.id} className="text-center">
-                                    <td className="p-2 border">{item.nom}</td>
-                                    <td className="p-2 border">{item.type}</td>
-                                    <td className="p-2 border">{item.secteur}</td>
-                                    <td className="p-2 border">{item.localisation}</td>
-                                    <td className="p-2 border">{item.montant}</td>
-                                    <td className="p-2 border">
+                                    <td className="p-2 border border-gray-300">{item.nom}</td>
+                                    <td className="p-2 border border-gray-300">{item.type}</td>
+                                    <td className="p-2 border border-gray-300">{item.secteur}</td>
+                                    <td className="p-2 border border-gray-300">{item.localisation}</td>
+                                    <td className="p-2 border border-gray-300">{item.montant}</td>
+                                    <td className="p-2 border border-gray-300">
                                         {item.statut === "validée" ? (
                                             <span className="text-green-600 text-xl">✅</span>
                                         ) : (
